@@ -8,6 +8,7 @@ demystify
 docutils
 Flask
 Flask-Cors
+f2py
 gunicorn
 idna
 importlib-metadata
@@ -43,5 +44,6 @@ urllib3
 webencodings
 Werkzeug
 wrapt
+z3
 z3-solver
 zipp
