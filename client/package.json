@@ -19,10 +19,10 @@
     "web-vitals": "^1.1.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "worker": "cd ../server && rq worker",
     "backend": "cd ../server && source venv/bin/activate && export FLASK_ENV=development && flask run -p 21586",
-    "build": "react-scripts build",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
