@@ -18,8 +18,8 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # create a JAVA_HOME that's cross-architecture-safe
 ENV JAVA_HOME /docker-java-home
-RUN ln -svT "/usr/lib/jvm/java-11-openjdk-$(dpkg --print-architecture)" $JAVA_HOME
-ENV JAVA_VERSION 11
+RUN ln -svT "/usr/lib/jvm/java-17-openjdk-$(dpkg --print-architecture)" $JAVA_HOME
+ENV JAVA_VERSION 17
 
 RUN set -ex; \
 # slim variants have no man pages (causes "update-alternatives" to fail)
@@ -28,7 +28,7 @@ RUN set -ex; \
     fi; \
     apt-get update; \
     apt-get install -y --no-install-recommends \
-     openjdk-11-jre-headless; \
+     openjdk-17-jre-headless; \
 # update-alternatives so future installs of OpenJDK don't change /usr/bin/java
     update-alternatives --get-selections | awk -v home="$(readlink -f "$JAVA_HOME")" 'index($3, home) == 1 { $2 = "manual"; print | "update-alternatives --set-selections" }'; \
 # ... and verify it worked for one of the alternatives
