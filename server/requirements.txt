@@ -38,7 +38,6 @@ sortedcontainers
 toml
 tqdm
 twine
-typed-ast
 typing-extensions
 urllib3
 webencodings
