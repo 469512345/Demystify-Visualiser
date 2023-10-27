@@ -8,7 +8,6 @@ demystify
 docutils
 Flask
 Flask-Cors
-f2py
 gunicorn
 idna
 importlib-metadata
